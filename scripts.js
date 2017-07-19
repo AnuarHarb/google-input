@@ -1,1 +1,3 @@
-console.log('hola Mundo');
+'use strict';
+
+var searchList = [];
