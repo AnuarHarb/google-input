@@ -5,9 +5,7 @@ var flag = false;
 
 function removeOptionFromList() {
   console.log(this.value);
-  console.log(searchList);
   var option = this.value;
-  alert(option);
   var i = searchList.indexOf(option);
 
   if(i != -1) {
@@ -23,6 +21,7 @@ function agregarOption() {
   if (searchList.indexOf(busca) < 0 ) {
       console.log("El elemento no se encuentra y se agregara");
 			searchList.push(busca);
+      paintArray();
   }else{
 		console.log("El elemento"+ busca +" ya se encuentra");
 	}
