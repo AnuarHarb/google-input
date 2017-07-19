@@ -22,7 +22,7 @@ function paintArray(){
         li.appendChild(document.createTextNode('No hay sugerencias'));
         ul.appendChild(li);
     } else {
-        for(i of searchList){
+        for(let i of searchList){
             var boton = document.createElement("button");
             boton.setAttribute('class','removeButton');
             boton.innerHTML='X';
