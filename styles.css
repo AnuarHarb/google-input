@@ -2,3 +2,24 @@
   margin: 0;
   padding: 0;
 }
+
+
+.container {
+  margin-top: 300px;
+  text-align: center;
+  width: 100%;
+}
+
+.container button a {
+  text-decoration: none;
+}
+input {
+  border: 1px solid gray;
+  display: inline-block;
+  width: 500px;
+}
+
+button {
+  display: inline-block;
+  width: 50px;
+}
