@@ -1,10 +1,13 @@
 'use strict';
 
 var searchList = [];
+var flag = false;
 
 function removeOptionFromList() {
-  console.log(this);
+  console.log(this.value);
+  console.log(searchList);
   var option = this.value;
+  alert(option);
   var i = searchList.indexOf(option);
 
   if(i != -1) {
@@ -28,27 +31,31 @@ function agregarOption() {
 function paintArray(){
   //var div = document.getElementById('dropdown');
   var ul = document.getElementById("dropdown");
-  if(searchList.length=='0') {
-      var li = document.createElement("li");
-      li.appendChild(document.createTextNode('No hay sugerencias'));
-      ul.appendChild(li);
-  }else {
-    for(let i of searchList){
-        var boton = document.createElement("button");
-        boton.setAttribute('class','removeButton');
-        boton.setAttribute('value',i);
-        boton.innerHTML='X';
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(i));
-        li.appendChild(boton);
-        ul.appendChild(li);
-    }
-    var options = document.getElementsByClassName("removeButton");
-    for (let option of options) {
-      option.addEventListener("click",
-        removeOptionFromList);
-    }
-  }
+    //if(tam1!=tam2){
+        clearPaint();
+        for(let i of searchList){
+            var boton = document.createElement("a");
+            boton.setAttribute('class','removeButton');
+            boton.setAttribute('value',i);
+            boton.innerHTML='Eliminar';
+
+            var texto = document.createElement("p");
+            texto.setAttribute('class','option');
+            texto.setAttribute('value',i);
+
+            var li = document.createElement("li");
+            li.appendChild(texto);
+            li.appendChild(boton);
+            texto.appendChild(document.createTextNode(i));
+            ul.appendChild(li);
+            flag=true;
+        }
+        var options = document.getElementsByClassName("removeButton");
+        for (let option of options) {
+          option.addEventListener("click",
+            removeOptionFromList);
+        }
+    //}
 }
 
 function clearPaint(){

@@ -2,13 +2,45 @@
   margin: 0;
   padding: 0;
 }
-
 .container {
   margin-top: 300px;
   text-align: center;
   width: 100%;
 }
-
+ul{
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+  border: 1px solid #ebebeb;
+  width: 584px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-top: none;
+}
+li{
+  color: #52188C;
+  height: 22px;
+  list-style: none;
+  font: 16px arial,sans-serif;
+}
+li p{
+  font-weight: bold;
+  width: 80%;
+  float: left;
+}
+li a{
+  font-size: 14px;
+  text-align: right;
+  color: #3366CC;
+  width: 20%;
+  float: right;
+}
+.removeButton{
+  cursor: pointer;
+}
+.form{
+  border: 1px solid #ebebeb;
+  height: 44px;
+}
 .container button a {
   text-decoration: none;
 }
