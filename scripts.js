@@ -9,6 +9,7 @@ function removeOptionFromList() {
 
   if(i != -1) {
   	searchList.splice(i, 1);
+    console.log(searchList);
   } else {
     console.log('no hay match');
   }
@@ -46,7 +47,6 @@ function paintArray(){
     for (let option of options) {
       option.addEventListener("click",
         removeOptionFromList);
-      console.log('elemento de lista');
     }
   }
 }
