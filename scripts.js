@@ -1,6 +1,6 @@
 'use strict';
 
-var searchList = [];
+var searchList = ['eliminar elementos de un array', '¿Con que se come Polymer?', 'David daroesti', 'google.com', 'centraal dirección'];
 var flag = false;
 
 function agregarOption() {
@@ -29,9 +29,10 @@ function paintArray(){
             boton.setAttribute('value',i);
             boton.innerHTML='Eliminar';
 
-            var texto = document.createElement("p");
+            var texto = document.createElement("a");
             texto.setAttribute('class','option');
             texto.setAttribute('value',i);
+            texto.setAttribute('href','https://www.google.com.mx/?gfe_rd=cr&ei=N6RwWeSdOOjTXqDAvrAB#q='+i);
 
             var li = document.createElement("li");
             li.appendChild(texto);

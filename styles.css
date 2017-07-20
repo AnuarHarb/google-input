@@ -122,13 +122,19 @@ button img {
   background-color: #eee;
 }
 
-#dropdown li p {
+#dropdown li a {
+  color: #52188C;
   font-weight: bold;
   float: left;
   padding-left: 10px;
   text-align: left;
+  text-decoration: none;
   width: 80%;
 }
+#dropdown li a:active {
+  color: #52188C;
+}
+
 #dropdown li .delated {
   color: gray;
   font-weight: normal;
