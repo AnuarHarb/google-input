@@ -2,19 +2,46 @@
   margin: 0;
   padding: 0;
 }
-.container {
-  margin-top: 300px;
+
+main {
   text-align: center;
-  width: 100%;
+}
+.container {
+  border: 1px solid gray;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  display: inline-block;
+  margin-top: 300px;
+  padding: 10px 0;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  width: 500px;
+}
+input {
+  border: 0;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0 auto;
+  width: 85%
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  width: 10%;
 }
 ul{
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+  background-color: white;
   border: 1px solid #ebebeb;
-  width: 584px;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
   border-top: none;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+  margin: 0 auto;
+  width: 500px;
+}
+.no-bottom-shadow {
+  border-bottom: 0;
+  box-shadow: none;
 }
 li{
   color: #52188C;
@@ -22,20 +49,30 @@ li{
   list-style: none;
   font: 16px arial,sans-serif;
 }
+
+.delated {
+  color: gray;
+  font-weight: normal;
+}
 li p{
   font-weight: bold;
-  width: 80%;
   float: left;
-}
-li a{
-  font-size: 14px;
-  text-align: right;
-  color: #3366CC;
-  width: 20%;
-  float: right;
+  padding-left: 10px;
+  text-align: left;
+  width: 80%;
 }
 .removeButton{
+  background-color: transparent;
+  border: 0;
+  color: #3366CC;
   cursor: pointer;
+  font-weight: bold;
+}
+.removeButton:hover {
+  text-decoration: underline;
+}
+.removeButton:focus {
+  outline: none;
 }
 .form{
   border: 1px solid #ebebeb;
@@ -43,14 +80,4 @@ li a{
 }
 .container button a {
   text-decoration: none;
-}
-input {
-  border: 1px solid gray;
-  display: inline-block;
-  width: 500px;
-}
-
-button {
-  display: inline-block;
-  width: 50px;
 }
