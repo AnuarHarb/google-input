@@ -4,21 +4,23 @@ var searchList = [];
 var flag = false;
 
 function agregarOption() {
+  var input = document.getElementById("google-input");
 	var busca = document.getElementById("google-input").value;
+  var container = document.querySelector(".container");
   if (searchList.indexOf(busca) < 0 ) {
       console.log("El elemento no se encuentra y se agregara");
 			searchList.push(busca);
+      container.setAttribute('class', 'container no-bottom-shadow')
       paintArray();
   }else{
 		console.log("El elemento"+ busca +" ya se encuentra");
 	}
+  input.value = "";
 }
 
 function paintArray(){
   //var div = document.getElementById('dropdown');
   var ul = document.getElementById("dropdown");
-  var container = document.querySelector(".container");
-  container.setAttribute('class', 'container no-bottom-shadow')
     //if(tam1!=tam2){
         clearPaint();
         for(let i of searchList){

@@ -28,8 +28,22 @@ input:focus {
 }
 
 button {
+  background-color: transparent;
+  border: none;
+  height: 15px;
   display: inline-block;
+  position: relative;
   width: 10%;
+}
+
+button:focus {
+  outline: none;
+}
+
+button img {
+  position: absolute;
+  top: -4px;
+  width: 27px;
 }
 ul{
   background-color: white;
